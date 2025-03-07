@@ -2,13 +2,14 @@
 <!-- This file was automatically generated from C sources - DO NOT EDIT!
 To affect the contents of this file, edit the original C definitions,
 and/or use gtk-doc annotations.  -->
-<repository xmlns="http://www.gtk.org/introspection/core/1.0" xmlns:c="http://www.gtk.org/introspection/c/1.0" xmlns:glib="http://www.gtk.org/introspection/glib/1.0" version="1.2">
+<repository xmlns="http://www.gtk.org/introspection/core/1.0" xmlns:c="http://www.gtk.org/introspection/c/1.0" xmlns:doc="http://www.gtk.org/introspection/doc/1.0" xmlns:glib="http://www.gtk.org/introspection/glib/1.0" version="1.2">
   <include name="GdkPixbuf" version="2.0"/>
   <include name="Gio" version="2.0"/>
   <include name="Pango" version="1.0"/>
   <include name="cairo" version="1.0"/>
   <package name="gdk-3.0"/>
   <c:include name="gdk/gdk.h"/>
+  <doc:format name="unknown"/>
   <namespace name="Gdk" version="3.0" shared-library="libgdk-3.so.0" c:identifier-prefixes="Gdk" c:symbol-prefixes="gdk">
     <alias name="XEvent" c:type="GdkXEvent">
       <doc xml:space="preserve">Used to represent native events (XEvents for the X11
@@ -651,7 +652,12 @@ platforms can be found in the CSS specification:
 - ![](nesw_resize_cursor.png) "nesw-resize"
 - ![](nwse_resize_cursor.png) "nwse-resize"
 - ![](zoom_in_cursor.png) "zoom-in"
-- ![](zoom_out_cursor.png) "zoom-out"</doc>
+- ![](zoom_out_cursor.png) "zoom-out"
+
+Additionally, the following cursor names are supported, which are
+not in the CSS specification:
+- ![](dnd_ask_cursor.png) "dnd-ask"
+- ![](all_resize_cursor.png) "all-resize"</doc>
         <return-value transfer-ownership="full" nullable="1">
           <doc xml:space="preserve">a new #GdkCursor, or %NULL if there is no
   cursor with the given name</doc>
@@ -14773,7 +14779,7 @@ See gdk_keymap_get_caps_lock_state().</doc>
     <constant name="MAX_TIMECOORD_AXES" value="128" c:type="GDK_MAX_TIMECOORD_AXES">
       <type name="gint" c:type="gint"/>
     </constant>
-    <constant name="MICRO_VERSION" value="48" c:type="GDK_MICRO_VERSION">
+    <constant name="MICRO_VERSION" value="50" c:type="GDK_MICRO_VERSION">
       <type name="gint" c:type="gint"/>
     </constant>
     <constant name="MINOR_VERSION" value="24" c:type="GDK_MINOR_VERSION">

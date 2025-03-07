@@ -2,10 +2,11 @@
 <!-- This file was automatically generated from C sources - DO NOT EDIT!
 To affect the contents of this file, edit the original C definitions,
 and/or use gtk-doc annotations.  -->
-<repository xmlns="http://www.gtk.org/introspection/core/1.0" xmlns:c="http://www.gtk.org/introspection/c/1.0" xmlns:glib="http://www.gtk.org/introspection/glib/1.0" version="1.2">
+<repository xmlns="http://www.gtk.org/introspection/core/1.0" xmlns:c="http://www.gtk.org/introspection/c/1.0" xmlns:doc="http://www.gtk.org/introspection/doc/1.0" xmlns:glib="http://www.gtk.org/introspection/glib/1.0" version="1.2">
   <include name="GLib" version="2.0"/>
   <package name="gobject-2.0"/>
   <c:include name="glib-object.h"/>
+  <doc:format name="unknown"/>
   <namespace name="GObject" version="2.0" shared-library="libgobject-2.0.so.0" c:identifier-prefixes="G" c:symbol-prefixes="gobject,g">
     <alias name="SignalCMarshaller" c:type="GSignalCMarshaller">
       <doc xml:space="preserve">This is the signature of marshaller functions, required to marshall
@@ -5632,6 +5633,151 @@ or derived.</doc>
 
 All the fields in the `GInitiallyUnowned` structure are private to the
 implementation and should never be accessed directly.</doc>
+      <virtual-method name="constructed" glib:static="1">
+        <doc xml:space="preserve">the @constructed function is called by g_object_new() as the
+ final step of the object creation process.  At the point of the call, all
+ construction properties have been set on the object.  The purpose of this
+ call is to allow for object initialisation steps that can only be performed
+ after construction properties have been set.  @constructed implementors
+ should chain up to the @constructed call of their parent class to allow it
+ to complete its initialisation.</doc>
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+        <parameters>
+          <parameter name="object" transfer-ownership="none">
+            <type name="Object" c:type="GObject*"/>
+          </parameter>
+        </parameters>
+      </virtual-method>
+      <virtual-method name="constructor" glib:static="1" introspectable="0">
+        <doc xml:space="preserve">the @constructor function is called by g_object_new () to
+ complete the object initialization after all the construction properties are
+ set. The first thing a @constructor implementation must do is chain up to the
+ @constructor of the parent class. Overriding @constructor should be rarely
+ needed, e.g. to handle construct properties, or to implement singletons.</doc>
+        <return-value>
+          <type name="Object" c:type="GObject*"/>
+        </return-value>
+        <parameters>
+          <parameter name="type" transfer-ownership="none">
+            <type name="GType" c:type="GType"/>
+          </parameter>
+          <parameter name="n_construct_properties" transfer-ownership="none">
+            <type name="guint" c:type="guint"/>
+          </parameter>
+          <parameter name="construct_properties" transfer-ownership="none">
+            <type name="ObjectConstructParam" c:type="GObjectConstructParam*"/>
+          </parameter>
+        </parameters>
+      </virtual-method>
+      <virtual-method name="dispatch_properties_changed" glib:static="1">
+        <doc xml:space="preserve">emits property change notification for a bunch
+ of properties. Overriding @dispatch_properties_changed should be rarely
+ needed.</doc>
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+        <parameters>
+          <parameter name="object" transfer-ownership="none">
+            <type name="Object" c:type="GObject*"/>
+          </parameter>
+          <parameter name="n_pspecs" transfer-ownership="none">
+            <type name="guint" c:type="guint"/>
+          </parameter>
+          <parameter name="pspecs" transfer-ownership="none">
+            <type name="ParamSpec" c:type="GParamSpec**"/>
+          </parameter>
+        </parameters>
+      </virtual-method>
+      <virtual-method name="dispose" glib:static="1">
+        <doc xml:space="preserve">the @dispose function is supposed to drop all references to other
+ objects, but keep the instance otherwise intact, so that client method
+ invocations still work. It may be run multiple times (due to reference
+ loops). Before returning, @dispose should chain up to the @dispose method
+ of the parent class.</doc>
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+        <parameters>
+          <parameter name="object" transfer-ownership="none">
+            <type name="Object" c:type="GObject*"/>
+          </parameter>
+        </parameters>
+      </virtual-method>
+      <virtual-method name="finalize" glib:static="1">
+        <doc xml:space="preserve">instance finalization function, should finish the finalization of
+ the instance begun in @dispose and chain up to the @finalize method of the
+ parent class.</doc>
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+        <parameters>
+          <parameter name="object" transfer-ownership="none">
+            <type name="Object" c:type="GObject*"/>
+          </parameter>
+        </parameters>
+      </virtual-method>
+      <virtual-method name="get_property" glib:static="1">
+        <doc xml:space="preserve">the generic getter for all properties of this type. Should be
+ overridden for every type with properties.</doc>
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+        <parameters>
+          <parameter name="object" transfer-ownership="none">
+            <type name="Object" c:type="GObject*"/>
+          </parameter>
+          <parameter name="property_id" transfer-ownership="none">
+            <type name="guint" c:type="guint"/>
+          </parameter>
+          <parameter name="value" transfer-ownership="none">
+            <type name="Value" c:type="GValue*"/>
+          </parameter>
+          <parameter name="pspec" transfer-ownership="none">
+            <type name="ParamSpec" c:type="GParamSpec*"/>
+          </parameter>
+        </parameters>
+      </virtual-method>
+      <virtual-method name="notify" glib:static="1">
+        <doc xml:space="preserve">the class closure for the notify signal</doc>
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+        <parameters>
+          <parameter name="object" transfer-ownership="none">
+            <doc xml:space="preserve">a #GObject</doc>
+            <type name="Object" c:type="GObject*"/>
+          </parameter>
+          <parameter name="pspec" transfer-ownership="none">
+            <type name="ParamSpec" c:type="GParamSpec*"/>
+          </parameter>
+        </parameters>
+      </virtual-method>
+      <virtual-method name="set_property" glib:static="1">
+        <doc xml:space="preserve">the generic setter for all properties of this type. Should be
+ overridden for every type with properties. If implementations of
+ @set_property don't emit property change notification explicitly, this will
+ be done implicitly by the type system. However, if the notify signal is
+ emitted explicitly, the type system will not emit it a second time.</doc>
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+        <parameters>
+          <parameter name="object" transfer-ownership="none">
+            <type name="Object" c:type="GObject*"/>
+          </parameter>
+          <parameter name="property_id" transfer-ownership="none">
+            <type name="guint" c:type="guint"/>
+          </parameter>
+          <parameter name="value" transfer-ownership="none">
+            <type name="Value" c:type="const GValue*"/>
+          </parameter>
+          <parameter name="pspec" transfer-ownership="none">
+            <type name="ParamSpec" c:type="GParamSpec*"/>
+          </parameter>
+        </parameters>
+      </virtual-method>
       <field name="g_type_instance">
         <type name="TypeInstance" c:type="GTypeInstance"/>
       </field>
@@ -6289,6 +6435,27 @@ already been loaded, g_type_default_interface_peek().</doc>
           <instance-parameter name="object" transfer-ownership="none">
             <type name="Object" c:type="GObject*"/>
           </instance-parameter>
+        </parameters>
+      </virtual-method>
+      <virtual-method name="constructor" glib:static="1" introspectable="0">
+        <doc xml:space="preserve">the @constructor function is called by g_object_new () to
+ complete the object initialization after all the construction properties are
+ set. The first thing a @constructor implementation must do is chain up to the
+ @constructor of the parent class. Overriding @constructor should be rarely
+ needed, e.g. to handle construct properties, or to implement singletons.</doc>
+        <return-value>
+          <type name="Object" c:type="GObject*"/>
+        </return-value>
+        <parameters>
+          <parameter name="type" transfer-ownership="none">
+            <type name="GType" c:type="GType"/>
+          </parameter>
+          <parameter name="n_construct_properties" transfer-ownership="none">
+            <type name="guint" c:type="guint"/>
+          </parameter>
+          <parameter name="construct_properties" transfer-ownership="none">
+            <type name="ObjectConstructParam" c:type="GObjectConstructParam*"/>
+          </parameter>
         </parameters>
       </virtual-method>
       <virtual-method name="dispatch_properties_changed">

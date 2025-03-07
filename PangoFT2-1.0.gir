@@ -2,11 +2,12 @@
 <!-- This file was automatically generated from C sources - DO NOT EDIT!
 To affect the contents of this file, edit the original C definitions,
 and/or use gtk-doc annotations.  -->
-<repository xmlns="http://www.gtk.org/introspection/core/1.0" xmlns:c="http://www.gtk.org/introspection/c/1.0" xmlns:glib="http://www.gtk.org/introspection/glib/1.0" version="1.2">
+<repository xmlns="http://www.gtk.org/introspection/core/1.0" xmlns:c="http://www.gtk.org/introspection/c/1.0" xmlns:doc="http://www.gtk.org/introspection/doc/1.0" xmlns:glib="http://www.gtk.org/introspection/glib/1.0" version="1.2">
   <include name="PangoFc" version="1.0"/>
   <include name="freetype2" version="2.0"/>
   <package name="pangoft2"/>
   <c:include name="pango/pangoft2.h"/>
+  <doc:format name="unknown"/>
   <namespace name="PangoFT2" version="1.0" shared-library="libpangoft2-1.0.so.0" c:identifier-prefixes="PangoFT2" c:symbol-prefixes="pango_ft2">
     <function-macro name="FONT_MAP" c:identifier="PANGO_FT2_FONT_MAP" introspectable="0">
       <parameters>

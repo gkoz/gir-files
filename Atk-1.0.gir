@@ -2,10 +2,11 @@
 <!-- This file was automatically generated from C sources - DO NOT EDIT!
 To affect the contents of this file, edit the original C definitions,
 and/or use gtk-doc annotations.  -->
-<repository xmlns="http://www.gtk.org/introspection/core/1.0" xmlns:c="http://www.gtk.org/introspection/c/1.0" xmlns:glib="http://www.gtk.org/introspection/glib/1.0" version="1.2">
+<repository xmlns="http://www.gtk.org/introspection/core/1.0" xmlns:c="http://www.gtk.org/introspection/c/1.0" xmlns:doc="http://www.gtk.org/introspection/doc/1.0" xmlns:glib="http://www.gtk.org/introspection/glib/1.0" version="1.2">
   <include name="GObject" version="2.0"/>
   <package name="atk"/>
   <c:include name="atk/atk.h"/>
+  <doc:format name="unknown"/>
   <namespace name="Atk" version="1.0" shared-library="libatk-1.0.so.0" c:identifier-prefixes="Atk" c:symbol-prefixes="atk">
     <alias name="AttributeSet" c:type="AtkAttributeSet">
       <doc xml:space="preserve">This is a singly-linked list (a #GSList) of #AtkAttribute. It is
@@ -3184,6 +3185,30 @@ the @obj</doc>
           </parameter>
         </parameters>
       </function>
+      <virtual-method name="pad1" glib:static="1">
+        <return-value transfer-ownership="none">
+          <doc xml:space="preserve">not used</doc>
+          <type name="gboolean" c:type="gboolean"/>
+        </return-value>
+        <parameters>
+          <parameter name="user_data" transfer-ownership="none" nullable="1" allow-none="1" closure="0">
+            <doc xml:space="preserve">custom data defined by the user</doc>
+            <type name="gpointer" c:type="gpointer"/>
+          </parameter>
+        </parameters>
+      </virtual-method>
+      <virtual-method name="pad2" glib:static="1">
+        <return-value transfer-ownership="none">
+          <doc xml:space="preserve">not used</doc>
+          <type name="gboolean" c:type="gboolean"/>
+        </return-value>
+        <parameters>
+          <parameter name="user_data" transfer-ownership="none" nullable="1" allow-none="1" closure="0">
+            <doc xml:space="preserve">custom data defined by the user</doc>
+            <type name="gpointer" c:type="gpointer"/>
+          </parameter>
+        </parameters>
+      </virtual-method>
       <method name="get_object" c:identifier="atk_gobject_accessible_get_object">
         <doc xml:space="preserve">Gets the GObject for which @obj is the accessible object.</doc>
         <return-value transfer-ownership="none">
@@ -3395,6 +3420,18 @@ respect to the document it references) and %FALSE otherwise.</doc>
           <instance-parameter name="link_" transfer-ownership="none">
             <type name="Hyperlink" c:type="AtkHyperlink*"/>
           </instance-parameter>
+        </parameters>
+      </virtual-method>
+      <virtual-method name="pad1" glib:static="1">
+        <return-value transfer-ownership="none">
+          <doc xml:space="preserve">not used</doc>
+          <type name="gboolean" c:type="gboolean"/>
+        </return-value>
+        <parameters>
+          <parameter name="user_data" transfer-ownership="none" nullable="1" allow-none="1" closure="0">
+            <doc xml:space="preserve">custom data defined by the user</doc>
+            <type name="gpointer" c:type="gpointer"/>
+          </parameter>
         </parameters>
       </virtual-method>
       <method name="get_end_index" c:identifier="atk_hyperlink_get_end_index" glib:get-property="end-index">
@@ -5279,6 +5316,18 @@ to create an instance of a subclass of #AtkObject</doc>
           </parameter>
         </parameters>
       </virtual-method>
+      <virtual-method name="pad1" glib:static="1">
+        <return-value transfer-ownership="none">
+          <doc xml:space="preserve">not used</doc>
+          <type name="gboolean" c:type="gboolean"/>
+        </return-value>
+        <parameters>
+          <parameter name="user_data" transfer-ownership="none" nullable="1" allow-none="1" closure="0">
+            <doc xml:space="preserve">custom data defined by the user</doc>
+            <type name="gpointer" c:type="gpointer"/>
+          </parameter>
+        </parameters>
+      </virtual-method>
       <virtual-method name="property_change">
         <return-value transfer-ownership="none">
           <type name="none" c:type="void"/>
@@ -6609,6 +6658,29 @@ accessible object for a specific GType. The function
 atk_registry_set_factory_type() is normally called to store in the
 registry the factory type to be used to create an accessible of a
 particular GType.</doc>
+      <virtual-method name="create_accessible" invoker="create_accessible" glib:static="1">
+        <doc xml:space="preserve">Provides an #AtkObject that implements an accessibility interface
+on behalf of @obj</doc>
+        <return-value transfer-ownership="full">
+          <doc xml:space="preserve">an #AtkObject that implements an accessibility
+interface on behalf of @obj</doc>
+          <type name="Object" c:type="AtkObject*"/>
+        </return-value>
+        <parameters>
+          <parameter name="obj" transfer-ownership="none">
+            <doc xml:space="preserve">a #GObject</doc>
+            <type name="GObject.Object" c:type="GObject*"/>
+          </parameter>
+        </parameters>
+      </virtual-method>
+      <virtual-method name="get_accessible_type" invoker="get_accessible_type" glib:static="1">
+        <doc xml:space="preserve">Gets the GType of the accessible which is created by the factory.</doc>
+        <return-value transfer-ownership="none">
+          <doc xml:space="preserve">the type of the accessible which is created by the @factory.
+The value G_TYPE_INVALID is returned if no type if found.</doc>
+          <type name="GType" c:type="GType"/>
+        </return-value>
+      </virtual-method>
       <virtual-method name="invalidate" invoker="invalidate">
         <doc xml:space="preserve">Inform @factory that it is no longer being used to create
 accessibles. When called, @factory may need to inform
@@ -6623,6 +6695,30 @@ in object registries.</doc>
             <doc xml:space="preserve">an #AtkObjectFactory to invalidate</doc>
             <type name="ObjectFactory" c:type="AtkObjectFactory*"/>
           </instance-parameter>
+        </parameters>
+      </virtual-method>
+      <virtual-method name="pad1" glib:static="1">
+        <return-value transfer-ownership="none">
+          <doc xml:space="preserve">not used</doc>
+          <type name="gboolean" c:type="gboolean"/>
+        </return-value>
+        <parameters>
+          <parameter name="user_data" transfer-ownership="none" nullable="1" allow-none="1" closure="0">
+            <doc xml:space="preserve">custom data defined by the user</doc>
+            <type name="gpointer" c:type="gpointer"/>
+          </parameter>
+        </parameters>
+      </virtual-method>
+      <virtual-method name="pad2" glib:static="1">
+        <return-value transfer-ownership="none">
+          <doc xml:space="preserve">not used</doc>
+          <type name="gboolean" c:type="gboolean"/>
+        </return-value>
+        <parameters>
+          <parameter name="user_data" transfer-ownership="none" nullable="1" allow-none="1" closure="0">
+            <doc xml:space="preserve">custom data defined by the user</doc>
+            <type name="gpointer" c:type="gpointer"/>
+          </parameter>
         </parameters>
       </virtual-method>
       <method name="create_accessible" c:identifier="atk_object_factory_create_accessible">
@@ -6683,13 +6779,16 @@ in object registries.</doc>
       <field name="parent_class">
         <type name="GObject.ObjectClass" c:type="GObjectClass"/>
       </field>
-      <field name="create_accessible" introspectable="0">
-        <callback name="create_accessible" introspectable="0">
-          <return-value>
+      <field name="create_accessible">
+        <callback name="create_accessible">
+          <return-value transfer-ownership="full">
+            <doc xml:space="preserve">an #AtkObject that implements an accessibility
+interface on behalf of @obj</doc>
             <type name="Object" c:type="AtkObject*"/>
           </return-value>
           <parameters>
             <parameter name="obj" transfer-ownership="none">
+              <doc xml:space="preserve">a #GObject</doc>
               <type name="GObject.Object" c:type="GObject*"/>
             </parameter>
           </parameters>
@@ -6711,6 +6810,8 @@ in object registries.</doc>
       <field name="get_accessible_type">
         <callback name="get_accessible_type">
           <return-value transfer-ownership="none">
+            <doc xml:space="preserve">the type of the accessible which is created by the @factory.
+The value G_TYPE_INVALID is returned if no type if found.</doc>
             <type name="GType" c:type="GType"/>
           </return-value>
         </callback>
@@ -7239,6 +7340,30 @@ relationships.</doc>
           <type name="RelationSet" c:type="AtkRelationSet*"/>
         </return-value>
       </constructor>
+      <virtual-method name="pad1" glib:static="1">
+        <return-value transfer-ownership="none">
+          <doc xml:space="preserve">not used</doc>
+          <type name="gboolean" c:type="gboolean"/>
+        </return-value>
+        <parameters>
+          <parameter name="user_data" transfer-ownership="none" nullable="1" allow-none="1" closure="0">
+            <doc xml:space="preserve">custom data defined by the user</doc>
+            <type name="gpointer" c:type="gpointer"/>
+          </parameter>
+        </parameters>
+      </virtual-method>
+      <virtual-method name="pad2" glib:static="1">
+        <return-value transfer-ownership="none">
+          <doc xml:space="preserve">not used</doc>
+          <type name="gboolean" c:type="gboolean"/>
+        </return-value>
+        <parameters>
+          <parameter name="user_data" transfer-ownership="none" nullable="1" allow-none="1" closure="0">
+            <doc xml:space="preserve">custom data defined by the user</doc>
+            <type name="gpointer" c:type="gpointer"/>
+          </parameter>
+        </parameters>
+      </virtual-method>
       <method name="add" c:identifier="atk_relation_set_add">
         <doc xml:space="preserve">Add a new relation to the current relation set if it is not already
 present.
@@ -9281,6 +9406,42 @@ if no corresponding URI can be constructed.</doc>
             <doc xml:space="preserve">a gchar* representing the mime type, or NULL to request a URI
 for the default mime type.</doc>
             <type name="utf8" c:type="const gchar*"/>
+          </parameter>
+        </parameters>
+      </virtual-method>
+      <virtual-method name="pad1" glib:static="1">
+        <return-value transfer-ownership="none">
+          <doc xml:space="preserve">not used</doc>
+          <type name="gboolean" c:type="gboolean"/>
+        </return-value>
+        <parameters>
+          <parameter name="user_data" transfer-ownership="none" nullable="1" allow-none="1" closure="0">
+            <doc xml:space="preserve">custom data defined by the user</doc>
+            <type name="gpointer" c:type="gpointer"/>
+          </parameter>
+        </parameters>
+      </virtual-method>
+      <virtual-method name="pad2" glib:static="1">
+        <return-value transfer-ownership="none">
+          <doc xml:space="preserve">not used</doc>
+          <type name="gboolean" c:type="gboolean"/>
+        </return-value>
+        <parameters>
+          <parameter name="user_data" transfer-ownership="none" nullable="1" allow-none="1" closure="0">
+            <doc xml:space="preserve">custom data defined by the user</doc>
+            <type name="gpointer" c:type="gpointer"/>
+          </parameter>
+        </parameters>
+      </virtual-method>
+      <virtual-method name="pad3" glib:static="1">
+        <return-value transfer-ownership="none">
+          <doc xml:space="preserve">not used</doc>
+          <type name="gboolean" c:type="gboolean"/>
+        </return-value>
+        <parameters>
+          <parameter name="user_data" transfer-ownership="none" nullable="1" allow-none="1" closure="0">
+            <doc xml:space="preserve">custom data defined by the user</doc>
+            <type name="gpointer" c:type="gpointer"/>
           </parameter>
         </parameters>
       </virtual-method>
@@ -14376,6 +14537,83 @@ A set of ATK utility functions which are used to support event
 registration of various types, and obtaining the 'root' accessible
 of a process and information about the current ATK implementation
 and toolkit version.</doc>
+      <virtual-method name="add_global_event_listener" glib:static="1" introspectable="0">
+        <doc xml:space="preserve">adds the specified function to the list
+ of functions to be called when an ATK event occurs. ATK
+ implementors are discouraged from reimplementing this method.</doc>
+        <return-value transfer-ownership="none">
+          <type name="guint" c:type="guint"/>
+        </return-value>
+        <parameters>
+          <parameter name="listener" transfer-ownership="none">
+            <type name="GObject.SignalEmissionHook" c:type="GSignalEmissionHook"/>
+          </parameter>
+          <parameter name="event_type" transfer-ownership="none">
+            <type name="utf8" c:type="const gchar*"/>
+          </parameter>
+        </parameters>
+      </virtual-method>
+      <virtual-method name="add_key_event_listener" glib:static="1" introspectable="0">
+        <doc xml:space="preserve">adds the specified function to the list of
+ functions to be called when a key event occurs.</doc>
+        <return-value transfer-ownership="none">
+          <type name="guint" c:type="guint"/>
+        </return-value>
+        <parameters>
+          <parameter name="listener" transfer-ownership="none" closure="1">
+            <type name="KeySnoopFunc" c:type="AtkKeySnoopFunc"/>
+          </parameter>
+          <parameter name="data" transfer-ownership="none" nullable="1" allow-none="1">
+            <type name="gpointer" c:type="gpointer"/>
+          </parameter>
+        </parameters>
+      </virtual-method>
+      <virtual-method name="get_root" glib:static="1" introspectable="0">
+        <doc xml:space="preserve">gets the root accessible container for the current
+ application.</doc>
+        <return-value>
+          <type name="Object" c:type="AtkObject*"/>
+        </return-value>
+      </virtual-method>
+      <virtual-method name="get_toolkit_name" glib:static="1">
+        <doc xml:space="preserve">gets name string for the GUI toolkit
+ implementing ATK for this application.</doc>
+        <return-value transfer-ownership="none">
+          <type name="utf8" c:type="const gchar*"/>
+        </return-value>
+      </virtual-method>
+      <virtual-method name="get_toolkit_version" glib:static="1">
+        <doc xml:space="preserve">gets version string for the GUI toolkit
+ implementing ATK for this application.</doc>
+        <return-value transfer-ownership="none">
+          <type name="utf8" c:type="const gchar*"/>
+        </return-value>
+      </virtual-method>
+      <virtual-method name="remove_global_event_listener" glib:static="1">
+        <doc xml:space="preserve">removes the specified function to
+ the list of functions to be called when an ATK event occurs. ATK
+ implementors are discouraged from reimplementing this method.</doc>
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+        <parameters>
+          <parameter name="listener_id" transfer-ownership="none">
+            <type name="guint" c:type="guint"/>
+          </parameter>
+        </parameters>
+      </virtual-method>
+      <virtual-method name="remove_key_event_listener" glib:static="1">
+        <doc xml:space="preserve">remove the specified function to the
+ list of functions to be called when a key event occurs.</doc>
+        <return-value transfer-ownership="none">
+          <type name="none" c:type="void"/>
+        </return-value>
+        <parameters>
+          <parameter name="listener_id" transfer-ownership="none">
+            <type name="guint" c:type="guint"/>
+          </parameter>
+        </parameters>
+      </virtual-method>
       <field name="parent">
         <type name="GObject.Object" c:type="GObject"/>
       </field>
