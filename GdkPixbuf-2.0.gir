@@ -2,11 +2,12 @@
 <!-- This file was automatically generated from C sources - DO NOT EDIT!
 To affect the contents of this file, edit the original C definitions,
 and/or use gtk-doc annotations.  -->
-<repository xmlns="http://www.gtk.org/introspection/core/1.0" xmlns:c="http://www.gtk.org/introspection/c/1.0" xmlns:glib="http://www.gtk.org/introspection/glib/1.0" version="1.2">
+<repository xmlns="http://www.gtk.org/introspection/core/1.0" xmlns:c="http://www.gtk.org/introspection/c/1.0" xmlns:doc="http://www.gtk.org/introspection/doc/1.0" xmlns:glib="http://www.gtk.org/introspection/glib/1.0" version="1.2">
   <include name="GModule" version="2.0"/>
   <include name="Gio" version="2.0"/>
   <package name="gdk-pixbuf-2.0"/>
   <c:include name="gdk-pixbuf/gdk-pixbuf.h"/>
+  <doc:format name="unknown"/>
   <namespace name="GdkPixbuf" version="2.0" shared-library="libgdk_pixbuf-2.0.so.0" c:identifier-prefixes="Gdk" c:symbol-prefixes="gdk">
     <enumeration name="Colorspace" glib:type-name="GdkColorspace" glib:get-type="gdk_colorspace_get_type" c:type="GdkColorspace">
       <doc xml:space="preserve">This enumeration defines the color spaces that are supported by

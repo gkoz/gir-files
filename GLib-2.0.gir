@@ -2,9 +2,10 @@
 <!-- This file was automatically generated from C sources - DO NOT EDIT!
 To affect the contents of this file, edit the original C definitions,
 and/or use gtk-doc annotations.  -->
-<repository xmlns="http://www.gtk.org/introspection/core/1.0" xmlns:c="http://www.gtk.org/introspection/c/1.0" xmlns:glib="http://www.gtk.org/introspection/glib/1.0" version="1.2">
+<repository xmlns="http://www.gtk.org/introspection/core/1.0" xmlns:c="http://www.gtk.org/introspection/c/1.0" xmlns:doc="http://www.gtk.org/introspection/doc/1.0" xmlns:glib="http://www.gtk.org/introspection/glib/1.0" version="1.2">
   <package name="glib-2.0"/>
   <c:include name="glib.h"/>
+  <doc:format name="unknown"/>
   <namespace name="GLib" version="2.0" shared-library="libgobject-2.0.so.0,libglib-2.0.so.0" c:identifier-prefixes="G" c:symbol-prefixes="glib,g">
     <alias name="DateDay" c:type="GDateDay">
       <doc xml:space="preserve">Integer representing a day of the month; between 1 and 31.
@@ -15311,7 +15312,7 @@ linked against at application run time.</doc>
     <constant name="MAXUINT8" value="255" c:type="G_MAXUINT8">
       <type name="guint8" c:type="guint8"/>
     </constant>
-    <constant name="MICRO_VERSION" value="5" c:type="GLIB_MICRO_VERSION">
+    <constant name="MICRO_VERSION" value="0" c:type="GLIB_MICRO_VERSION">
       <doc xml:space="preserve">The micro version number of the GLib library.
 
 Like #gtk_micro_version, but from the headers used at
@@ -15335,7 +15336,7 @@ linked against at application run time.</doc>
       <doc xml:space="preserve">The minimum value which can be held in a #gint8.</doc>
       <type name="gint8" c:type="gint8"/>
     </constant>
-    <constant name="MINOR_VERSION" value="83" c:type="GLIB_MINOR_VERSION">
+    <constant name="MINOR_VERSION" value="84" c:type="GLIB_MINOR_VERSION">
       <doc xml:space="preserve">The minor version number of the GLib library.
 
 Like #gtk_minor_version, but from the headers used at

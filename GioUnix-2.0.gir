@@ -2,7 +2,7 @@
 <!-- This file was automatically generated from C sources - DO NOT EDIT!
 To affect the contents of this file, edit the original C definitions,
 and/or use gtk-doc annotations.  -->
-<repository xmlns="http://www.gtk.org/introspection/core/1.0" xmlns:c="http://www.gtk.org/introspection/c/1.0" xmlns:glib="http://www.gtk.org/introspection/glib/1.0" version="1.2">
+<repository xmlns="http://www.gtk.org/introspection/core/1.0" xmlns:c="http://www.gtk.org/introspection/c/1.0" xmlns:doc="http://www.gtk.org/introspection/doc/1.0" xmlns:glib="http://www.gtk.org/introspection/glib/1.0" version="1.2">
   <include name="GLib" version="2.0"/>
   <include name="GModule" version="2.0"/>
   <include name="GObject" version="2.0"/>
@@ -15,6 +15,7 @@ and/or use gtk-doc annotations.  -->
   <c:include name="gio/gunixinputstream.h"/>
   <c:include name="gio/gunixmounts.h"/>
   <c:include name="gio/gunixoutputstream.h"/>
+  <doc:format name="unknown"/>
   <namespace name="GioUnix" version="2.0" shared-library="libgio-2.0.so.0" c:identifier-prefixes="GUnix,G" c:symbol-prefixes="gio,g_unix,g">
     <function-macro name="DESKTOP_APP_INFO" c:identifier="G_DESKTOP_APP_INFO" introspectable="0">
       <parameters>
@@ -674,6 +675,21 @@ directly. Applications should use
           </parameter>
         </parameters>
       </function>
+      <virtual-method name="get_default_for_uri_scheme" glib:static="1" introspectable="0">
+        <doc xml:space="preserve">Virtual method for
+ g_desktop_app_info_lookup_get_default_for_uri_scheme().</doc>
+        <return-value>
+          <type name="Gio.AppInfo" c:type="GAppInfo*"/>
+        </return-value>
+        <parameters>
+          <parameter name="lookup" transfer-ownership="none">
+            <type name="Gio.DesktopAppInfoLookup" c:type="GDesktopAppInfoLookup*"/>
+          </parameter>
+          <parameter name="uri_scheme" transfer-ownership="none">
+            <type name="utf8" c:type="const char*"/>
+          </parameter>
+        </parameters>
+      </virtual-method>
     </interface>
     <record name="DesktopAppInfoLookupIface" c:type="GDesktopAppInfoLookupIface" glib:is-gtype-struct-for="DesktopAppInfoLookup">
       <doc xml:space="preserve">Interface that is used by backends to associate default
@@ -915,6 +931,17 @@ file or the `GioUnix-2.0` GIR namespace when using it.</doc>
           </parameter>
         </parameters>
       </function>
+      <virtual-method name="get_fd" glib:static="1">
+        <doc xml:space="preserve">Gets the underlying file descriptor.</doc>
+        <return-value transfer-ownership="none">
+          <type name="gint" c:type="int"/>
+        </return-value>
+        <parameters>
+          <parameter name="fd_based" transfer-ownership="none">
+            <type name="Gio.FileDescriptorBased" c:type="GFileDescriptorBased*"/>
+          </parameter>
+        </parameters>
+      </virtual-method>
     </interface>
     <record name="FileDescriptorBasedIface" c:type="GFileDescriptorBasedIface" glib:is-gtype-struct-for="FileDescriptorBased">
       <doc xml:space="preserve">An interface for file descriptor based io objects.</doc>

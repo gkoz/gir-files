@@ -2,11 +2,12 @@
 <!-- This file was automatically generated from C sources - DO NOT EDIT!
 To affect the contents of this file, edit the original C definitions,
 and/or use gtk-doc annotations.  -->
-<repository xmlns="http://www.gtk.org/introspection/core/1.0" xmlns:c="http://www.gtk.org/introspection/c/1.0" xmlns:glib="http://www.gtk.org/introspection/glib/1.0" version="1.2">
+<repository xmlns="http://www.gtk.org/introspection/core/1.0" xmlns:c="http://www.gtk.org/introspection/c/1.0" xmlns:doc="http://www.gtk.org/introspection/doc/1.0" xmlns:glib="http://www.gtk.org/introspection/glib/1.0" version="1.2">
   <include name="Gdk" version="4.0"/>
   <include name="xlib" version="2.0"/>
   <package name="gtk4-x11"/>
   <c:include name="gdk/x11/gdkx.h"/>
+  <doc:format name="unknown"/>
   <namespace name="GdkX11" version="4.0" shared-library="libgtk-4.so.1" c:identifier-prefixes="Gdk" c:symbol-prefixes="gdk">
     <function-macro name="DISPLAY_XDISPLAY" c:identifier="GDK_DISPLAY_XDISPLAY" introspectable="0">
       <doc xml:space="preserve">Returns the display of a `GdkDisplay`.</doc>
